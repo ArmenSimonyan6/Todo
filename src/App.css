@@ -2,16 +2,47 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(107, 107, 107);
+}
+
 
 .post {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   margin: 50px 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(139, 139, 139);
+  background-color: rgb(222, 222, 222);
+  border-radius: 5px;
 }
 
+.post .name{
+  text-decoration: line-through;
+}
 
 .post button {
   cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(152, 152, 152);
+}
+
+.form input{
+  background-color: rgb(222, 222, 222);
+  outline: none;
+  border: none;
+  margin: 20px 0;
+  padding: 10px 20px;
+}
+
+.form button{
+  cursor: pointer;
+  margin-left: 2px;
+  padding: 10px 15px;
+  border: none;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: rgb(152, 152, 152);
 }

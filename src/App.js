@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo, changeText, selectTodo, deleteTodo } from './features/todoSlice';
+import { addTodo, changeText, selectTodo, deleteTodo, checkedTodo } from './features/todoSlice';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 function App() {
 
@@ -24,16 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={addNewTodo}>
-        <input value={text} type='text' onChange={changeHendler}/>
-        <button>Add</button>
-      </form>
-      {
-        todos.map(el => <div className='post'>
-          <div className='name'>{el.text}</div>
-          <button onClick={() => deletePost(el.id)}>Delete</button>
-        </div>)
-      }
+      <TodoForm addNewTodo={addNewTodo} changeHendler={changeHendler} text={text}/>
+      <TodoList checkedTodo={checkedTodo} deletePost={deletePost} todos={todos}/>
     </div>
   );
 }
